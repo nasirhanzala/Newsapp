@@ -27,7 +27,7 @@ const News = (props) => {
     props.setProgress(10);
     setLoading(true);
 
-let url = `https://gnews.io/api/v4/top-headlines?category=${props.category}&lang=en&country=${props.country}&apikey=YOUR_GNEWS_API_KEY_HERE&page=1&max=${props.pageSize}`;
+let url = `https://gnews.io/api/v4/top-headlines?category=${props.category}&lang=en&country=${props.country}&apikey=892fc39cc66fd053a32a2d6e35a16e2fpage=1&max=${props.pageSize}`;
     let data = await fetch(url);
     props.setProgress(30);
 
@@ -44,7 +44,7 @@ let url = `https://gnews.io/api/v4/top-headlines?category=${props.category}&lang
   const fetchMoreData = async () => {
     let nextPage = page + 1;
 
-let url = `https://gnews.io/api/v4/top-headlines?category=${props.category}&lang=en&country=${props.country}&apikey=YOUR_GNEWS_API_KEY_HERE&page=1&max=${props.pageSize}`;
+let url = `https://gnews.io/api/v4/top-headlines?category=${props.category}&lang=en&country=${props.country}&apikey=892fc39cc66fd053a32a2d6e35a16e2f&page=1&max=${props.pageSize}`;
 
     let data = await fetch(url);
     let parsedData = await data.json();
