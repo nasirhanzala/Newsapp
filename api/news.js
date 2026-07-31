@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   const { country, category, page, pageSize } = req.query;
-  const apiKey = process.env.NEWS_API_KEY;
+  const apiKey = process.env.REACT_APP_NEWS_API;
 
   const url = `https://gnews.io/api/v4/top-headlines?category=${category || "general"}&lang=en&country=${country || "us"}&max=${pageSize || 10}&page=${page || 1}&apikey=${apiKey}`;
 
